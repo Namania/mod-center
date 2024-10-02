@@ -15,11 +15,6 @@
     background-color: rgb(75, 75, 75);
 }
 
-.shadow {
-    -webkit-box-shadow: 10px 10px 0px 7px #000000; 
-    box-shadow: 10px 10px 0px 7px #000000;
-}
-
 .img-formater {
     position: absolute;
     top: 50%;
@@ -33,4 +28,18 @@
 .b-img {
     height: 100px;
     background-color: rgb(87, 87, 87);
+}
+
+h1 {
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 50px;
+}
+
+a {
+    position: absolute !important;
+    bottom: 15px !important;
 }
