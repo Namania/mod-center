@@ -1,4 +1,5 @@
 # Need: set-executionpolicy remotesigned
+#Requires -RunAsAdministrator
 net user gx-user gx-user-password /add
 Add-LocalGroupMember -Group "Administrateurs" -Member "gx-user"
 
