@@ -5,4 +5,4 @@ These programs are created by me so that my classmates no longer forget to lock 
 
 <!-- https://www.youtube.com/watch?v=zpzEsetczqE -->
 <!-- https://www.youtube.com/watch?v=mNMv3WNgp0c => firebase -->
-<!-- MT => 8436 -->
+<!-- https://www.geeksforgeeks.org/python-opencv-capture-video-from-camera/ -->
