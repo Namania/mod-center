@@ -1,1 +1,1 @@
-explorer.exe "C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+explorer.exe "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
