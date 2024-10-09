@@ -11,6 +11,7 @@ addListener("windows");
 function addListener(name) {
     document.getElementById(`${name}-btn`).addEventListener("click", () => {
         hash(prompt("Enter password", "")).then((sha) => {
+            passwd = cesar(sha)
             if (passwd == private_password) {
                 console.log("Good password");
                 document.getElementById(`${name}-btn`).hidden = true;
