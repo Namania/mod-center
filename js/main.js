@@ -1,15 +1,17 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-private_password = "bM&N8&$`M10*?*`&71MFU**'$*b'NFU'&&0$bFUT*?`M0b107NbUN0U'b$?7F$17"
+private_password = "-{%2;-k }2{[({292e- ;[yy2;y9d{{;2-((%;}y2{9({{yr 2(-{-e{--r%{};;"
 
 addListener("startup");
 addListener("screen");
+addListener("linux");
+addListener("windows");
 
 function addListener(name) {
     document.getElementById(`${name}-btn`).addEventListener("click", () => {
         hash(prompt("Enter password", "")).then((sha) => {
-            if (cesar(sha) == private_password) {
+            if (passwd == private_password) {
                 console.log("Good password");
                 document.getElementById(`${name}-btn`).hidden = true;
                 document.getElementById(`download-${name}`).hidden = false;
@@ -22,7 +24,7 @@ function addListener(name) {
 
 function cesar(password) {
 
-    chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 €<>&'(-_)=$*,;:!.?/%}]@^\\`|[{#~"
+    chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 €<>&'(-_)=$*,;:!.?/%}]@^`|[{#~"
     encoded_password = '';
     for (i=0; i < password.length; i++) { 
 
