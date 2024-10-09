@@ -1,3 +1,6 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 private_password = "230949293aef1c98eade64ac412bacd40d5d728920134be8a406ffe75d81beaa"
 
 addListener("startup");
