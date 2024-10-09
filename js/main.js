@@ -1,7 +1,7 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-private_password = "915ad5681c3f7f854c10bffe6f9ea0be553690b2f78139c34a9ba3be967406c4"
+private_password = "bM&N8&$`M10*?*`&71MFU**'$*b'NFU'&&0$bFUT*?`M0b107NbUN0U'b$?7F$17"
 
 addListener("startup");
 addListener("screen");
@@ -9,7 +9,7 @@ addListener("screen");
 function addListener(name) {
     document.getElementById(`${name}-btn`).addEventListener("click", () => {
         hash(prompt("Enter password", "")).then((sha) => {
-            if (sha == private_password) {
+            if (cesar(sha) == private_password) {
                 console.log("Good password");
                 document.getElementById(`${name}-btn`).hidden = true;
                 document.getElementById(`download-${name}`).hidden = false;
@@ -18,6 +18,28 @@ function addListener(name) {
             }
         });
     });
+}
+
+function cesar(password) {
+
+    chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 €<>&'(-_)=$*,;:!.?/%}]@^\\`|[{#~"
+    encoded_password = '';
+    for (i=0; i < password.length; i++) { 
+
+        if (!chars.includes(password[i])) {
+            
+        }
+
+        for (y=0; y < chars.length; y++) { 
+            if (password[i] == chars[y]) {
+                encoded_password += chars[(y + password[0].charCodeAt(0).toString(16)) % chars.length];
+            }
+        }
+
+    }
+
+    return encoded_password;
+
 }
 
 function hash(string) {
